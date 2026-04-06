@@ -86,7 +86,10 @@ CREATE TABLE order_items (
     FOREIGN KEY (product_id)
     REFERENCES product(product_id)
 );
-
+alter table order_items
+add column warehouse_id varchar(5),
+add constraint fk_order_items_warehouse
+foreign key(warehouse_id) references warehouse(warehouse_id);
 
 -- PAYMENTS TABLE
 CREATE TABLE payments (
