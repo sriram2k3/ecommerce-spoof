@@ -15,3 +15,19 @@ Build an end-to-end e-commerce platform with:
 
 ## Author
 Sri Ram
+
+## Database Implementation Progress
+
+Completed:
+- Product table
+- Customer table
+- Warehouse table
+- Inventory table
+- Orders table
+- Order items table
+- Payments table
+
+Implemented triggers:
+- Auto calculate total price
+- Reduce inventory on order
+- Restore inventory on cancel
