@@ -47,3 +47,24 @@ BEGIN
 END //
 
 DELIMITER ;
+
+-- Trigger 4 - Handling Overselling Inventory 
+delimiter //
+create trigger stockhoi_trig
+before insert on order_items
+for each row
+begin
+declare available_stock int;
+SELECT 
+    stock_qty
+INTO available_stock FROM
+    inventory
+WHERE
+    product_id = new.product_id
+        AND warehouse_id = new.warehouse_id;
+if new.qty > available_stock
+then signal sqlstate '45000'
+set message_text = 'Insufficient Stock'; 
+end if;
+end //
+delimiter ;

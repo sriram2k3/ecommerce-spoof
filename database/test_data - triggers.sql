@@ -32,9 +32,11 @@ select * from orders;
 
 INSERT INTO order_items(order_id,warehouse_id,product_id,qty)
 VALUES
-(1,'WH1',1,2);
+(1,'WH1',1,21);
 
 select * from order_items;
 select * from inventory;
 
 delete from order_items where order_id = 1;
+truncate inventory;
+select * from product;
