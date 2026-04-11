@@ -31,3 +31,11 @@ Implemented triggers:
 - Auto calculate total price
 - Reduce inventory on order
 - Restore inventory on cancel
+
+Implemented Transaction test
+ - Placing order details
+ - Adding order items
+ - Updating inventory
+ - Adding payment details
+ - Test for multiple products in a order
+ - Test for cancelling an order
