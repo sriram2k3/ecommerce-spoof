@@ -39,3 +39,18 @@ Implemented Transaction test
  - Adding payment details
  - Test for multiple products in a order
  - Test for cancelling an order
+
+## Analytics Layer (OLAP)
+
+Implemented:
+- sales_fact table (denormalized)
+- ETL transformation from OLTP tables
+- Sample analytics queries:
+  - Top selling products
+  - Revenue by warehouse
+  - Daily revenue
+
+Next Steps:
+- Dimension tables
+- Data simulation
+- Dashboard (Power BI)
