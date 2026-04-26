@@ -62,9 +62,9 @@ INTO available_stock FROM
 WHERE
     product_id = new.product_id
         AND warehouse_id = new.warehouse_id;
-if new.qty > available_stock
-then signal sqlstate '45000'
-set message_text = 'Insufficient Stock'; 
+IF new.qty > available_stock
+    THEN SIGNAL SQLSTATE '45000'
+    SET message_text = 'Insufficient Stock'; 
 end if;
 end //
 delimiter ;
